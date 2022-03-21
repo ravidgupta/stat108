@@ -1,0 +1,100 @@
+---
+title: "Lab 5"
+author: "Ravi Gupta"
+date: "2/18/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(stringr)
+library(knitr)
+library(skimr)
+library(broom)
+```
+```{r}
+airbnb <- read_csv("listings.csv")
+```
+Some Airbnb rentals have cleaning fees, and we want to include the cleaning fee when we calculate the total rental cost. Create a variable call cleaning_fee calculated as the 2% of the price per night.
+```{r}
+cleanairbnb <- airbnb %>%
+  mutate(cleaning_fee = .02 * (price))
+```
+Visualize the distribution of cleaning_fee and display the appropriate summary statistics. Use the graph and summary statistics to describe the distribution of cleaning_fee. The distribution is skewed right.
+```{r}
+ggplot(data = cleanairbnb, aes(x = cleaning_fee)) + geom_histogram(binwidth = 2) + labs(x = "Cleaning Fee", 
+       y = "Count", 
+       title = "Distribution of cleaning fee")
+cleanairbnb %>% 
+  summarise(min = min(cleaning_fee), 
+            q1 = quantile(cleaning_fee)[2], 
+            median = median(cleaning_fee), 
+            q3 = quantile(cleaning_fee)[4], 
+            max = max(cleaning_fee), 
+            iqr = IQR(cleaning_fee), 
+            mean = mean(cleaning_fee), 
+            std_dev = sd(cleaning_fee)
+            )
+```
+Next, let’s examine the neighbourhood.
+
+How many different categories of neighbourhood are in the dataset? Show code and output to support your answer. 22
+Which 3 neighborhoods are most common in the data? These 3 property types make up what percent of the observations in the data? Show code and output to support your answer. City of Capitola,		
+City of Santa Cruz, Unincorporated Areas			97.2%
+```{r}
+ggplot(data = cleanairbnb, aes(x = neighbourhood)) + geom_bar() + labs(x = "Neighborhood", 
+     y = "Count", 
+    title = "NeighboorHood Count")
+```
+```{r}
+n_distinct(cleanairbnb$neighbourhood)
+cleanairbnb %>%
+distinct(neighbourhood, id) %>%
+group_by(neighbourhood) %>%
+summarize("count" = n())
+
+```
+Since an overwhelming majority of the observations in the data are one of the top 3 cities, we would like to create a simplified version of the neighbourhood variable that has 4 categories.
+Create a new variable called neigh_simp that has 4 categories: the three from the previous question and “Other” for all other places. Be sure to save the new variable in the data frame.
+```{r}
+fourcleanairbnb <- cleanairbnb %>%
+   mutate(neigh_simp = ifelse(neighbourhood == "City of Capitola", "City of Capitola",ifelse(neighbourhood == "City of Santa Cruz", "City of Santa Cruz", ifelse(neighbourhood == "Unincorporated Areas", "Unincorporated Areas", "Other"))))
+```
+What are the 4 most common values for the variable minimum_nights? Which value in the top 4 stands out? What is the likely intended purpose for Airbnb listings with this seemingly unusual value for minimum_nights? Show code and output to support your answer. 1,2,3,4 Some people allow people to stay by the month until they want to leave.
+```{r}
+n_distinct(cleanairbnb$minimum_nights)
+cleanairbnb %>%
+distinct(minimum_nights, id) %>%
+group_by(minimum_nights) %>%
+summarize("count" = n())
+```
+For the response variable, we will use the total cost to stay at an Airbnb location for 3 nights. Create a new variable called price_3_nights that uses price and cleaning_fee to calculate the total cost to stay at the Airbnb property for 3 nights. Note that the cleaning fee is only applied one time per stay.
+```{r}
+pricefourcleanairbnb <- fourcleanairbnb %>%
+  mutate(price_3_nights = cleaning_fee + (price * 3))
+```
+Fit a regression model with the response variable from the previous question and the following predictor variables: neigh_simp, number_of_reviews, and reviews_per_month. Display the model with the inferential statistics and confidence intervals for each coefficient.
+```{r}
+model <- lm(price_3_nights ~ neigh_simp + number_of_reviews + reviews_per_month , data = pricefourcleanairbnb)
+summary(model)
+summary(model)$coefficient
+confint(model)
+```
+Interpret the coefficient of number_of_reviews and its 95% confidence interval in the context of the data. We are 95% confident that the true population mean is between -0.854 and -0.05.
+Interpret the coefficient of neigh_simpCity of Santa Cruz and its 95% confidence interval in the context of the data.
+We are 95% confident that the true population mean is between -377.43 and -105.75.
+Interpret the intercept in the context of the data. Does the intercept have a meaningful interpretation? Briefly explain why or why not. No it does not because that is when our predictor variables are all 0.
+Suppose your family is planning to visit Santa Cruz over Spring Break, and you want to stay in an Airbnb. You find an Airbnb that is in Scotts Vallye, has 10 reviews, and 5.14 reviews per month. Use the model to predict the total cost to stay at this Airbnb for 3 nights. Include the appropriate 95% interval with your prediction. 322.35
+```{r}
+new_obs = data.frame(neigh_simp = 'Other', number_of_reviews = 10, reviews_per_month = 5.14)
+predict(model, new_obs)
+```
+Now check the assumptions for your regression model. Should you be confident on interpreting the inferential results of your model? The assumptions are not satisfied because there isn't a linear relationship between the variables.
+```{r}
+ggplot(data = pricefourcleanairbnb, aes(x = number_of_reviews, y = price_3_nights)) + geom_point() + labs(x = "number of reviews", 
+     y = "Price", 
+    title = "Number of Reviews x Price")
+```

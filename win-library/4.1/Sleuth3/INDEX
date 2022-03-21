@@ -1,0 +1,198 @@
+Sleuth3-package         The R Sleuth3 package
+Sleuth3Manual           Manual of the R Sleuth3 package
+case0101                Motivation and Creativity
+case0102                Sex Discrimination in Employment
+case0201                Peter and Rosemary Grant's Finch Beak Data
+case0202                Anatomical Abnormalities Associated with
+                        Schizophrenia
+case0301                Cloud Seeding
+case0302                Agent Orange
+case0401                Space Shuttle
+case0402                Cognitive Load
+case0501                Diet Restriction and Longevity
+case0502                The Spock Conspiracy Trial
+case0601                Discrimination Against the Handicapped
+case0602                Mate Preference of Platyfish
+case0701                The Big Bang
+case0702                Meat Processing and pH
+case0801                Island Area and Number of Species
+case0802                Breakdown Times for Insulating Fluid under
+                        different Voltage
+case0901                Effects of Light on Meadowfoam Flowering
+case0902                Why Do Some Mammals Have Large Brains for Their
+                        Size?
+case1001                Galileo's Data on the Motion of Falling Bodies
+case1002                The Energy Costs of Echolocation by Bats
+case1101                Alcohol Metabolism in Men and Women
+case1102                The Blood-Brain Barrier
+case1201                State Average SAT Scores
+case1202                Sex discrimination in Employment
+case1301                Seaweed Grazers
+case1302                Pygmalion Effect
+case1401                Chimp Learning Times
+case1402                Effect of Ozone, SO2 and Drought on Soybean
+                        Yield
+case1501                Logging and Water Quality
+case1502                Global Warming
+case1601                Sites of Short- and Long-Term Memory
+case1602                Oat Bran and Cholesterol
+case1701                Magnetic Force on Printer Rods
+case1702                Love and Marriage
+case1801                Obesity and Heart Disease
+case1802                Vitamin C and the Common Cold
+case1803                Smoking and Lung Cancer
+case1901                Sex Role Sterotypes and Personnel Decisions
+case1902                Death Penalty and Race
+case2001                Survival in the Donner Party
+case2002                Birdkeeping and Lung Cancer
+case2101                Island Size and Bird Extinctions
+case2102                Moth Coloration and Natural Selection
+case2201                Age and Mating Success of Male Elephants
+case2202                Characteristics Associated with Salamander
+                        Habitat
+ex0112                  Fish Oil and Blood Pressure
+ex0116                  Gross Domestic Product (GDP) per Capita
+ex0125                  Zinc concentrations for two groups of rats
+ex0126                  Environmental Voting of Democrats and
+                        Republicans in the U.S. House of
+                        Representatives
+ex0127                  Environmental Voting of Democrats and
+                        Republicans in the U.S. Senate
+ex0211                  Lifetimes of Guinea Pigs
+ex0218                  Peter and Rosemary Grant's Finch Beak Data
+ex0221                  Bumpus's Data on Natural Selection
+ex0222                  Male and Female Intelligence
+ex0223                  Speed Limits and Traffic Fatalities
+ex0321                  Umpire Life Lengths
+ex0323                  Solar Radiation and Skin Cancer
+ex0327                  Pollen Removal
+ex0330                  Education and Income
+ex0331                  Education and Income
+ex0332                  College Tuition
+ex0333                  Brain Size and Litter Size
+ex0428                  Darwin's Data
+ex0429                  Salvage Logging
+ex0430                  Sunlight Protection Factor
+ex0431                  Effect of Group Therapy on Survival of Breast
+                        Cancer Patients
+ex0432                  Therapeutic Marijuana
+ex0518                  Fatty Acid
+ex0523                  Was Tyrannosaurus Rex Warm-Blooded?
+ex0524                  IQ and Future Income
+ex0525                  IQ and Future Income
+ex0623                  Diet Wars
+ex0624                  A Biological Basis for Homosexuality
+ex0721                  Planetary Distances and Order from the Sun
+ex0722                  Crab Claw Size and Force
+ex0724                  Decline in Male Births
+ex0725                  The Big Bang II
+ex0726                  Orign of the Term Regression
+ex0727                  Male Displays
+ex0728                  Brain Activity in Violin and String Players
+ex0729                  Sampling Bias in Exit Polls
+ex0730                  Sampling Bias in Exit Polls 2
+ex0816                  Meat Processing
+ex0817                  Biological Pest Control
+ex0820                  Quantifying Evidence for Outlierness
+ex0822                  Ecosystem Decay
+ex0823                  Wine Consumption and Heart Disease
+ex0824                  Respiratory Rates for Children
+ex0825                  The Dramatic U.S. Presidential Election of 2000
+ex0826                  Kleiber's Law
+ex0828                  IQ, Education, and Future Income
+ex0829                  Autism Rates
+ex0914                  Pace of Life and Heart Disease
+ex0915                  Rainfall and Corn Yield
+ex0918                  Speed of Evolution
+ex0920                  Winning Speeds at the Kentucky Derby
+ex0921                  Ingestion Rates of Deposit Feeders
+ex0923                  Comparing Male and Female Incomes, Accounting
+                        for Education and IQ
+ex1014                  Toxic Effects of Copper and Zinc
+ex1026                  Thinning of Ozone Layer
+ex1027                  Factors Affecting Extinction
+ex1028                  El Nino and Hurricanes
+ex1029                  Wage and Race
+ex1030                  Wage and Race 2011
+ex1031                  Who Looks After the Kids
+ex1033                  IQ Score and Income
+ex1111                  Chernobyl Fallout
+ex1120                  Was Tyrannosaurus Rex Warm-Blooded?
+ex1122                  Deforestation and Debt
+ex1123                  Air Pollution and Mortality
+ex1124                  Natal Dispersal Distances of Mammals
+ex1125                  Ingestion Rates of Deposit Feeders
+ex1217                  Pollution and Mortality
+ex1220                  Galapagos Islands
+ex1221                  Predicting Desert Wildflower Blooms
+ex1222                  Bush Gore Ballot Controversy
+ex1223                  IQ Score and Income
+ex1225                  Gender Differences in Wages
+ex1317                  Dinosaur Extinctions-An Observational Study
+ex1319                  Nature-Nurture
+ex1320                  Gender Differences in Performance on
+                        Mathematics Achievement Tests
+ex1321                  Pygmalion
+ex1416                  Blood Brain Barrier
+ex1417                  Second Replicate of the Barrier Disruption
+                        Study
+ex1419                  Clever Hans Effect
+ex1420                  Diet Wars
+ex1507                  Global Warming, Southern Hemisphere
+ex1509                  Sunspots
+ex1514                  Melanoma and Sunspot Activity-An Observational
+                        Study
+ex1515                  Lynx Trappings and Sunspots
+ex1516                  Trends in Firearm and Motor Vehicle Deaths in
+                        the U.S.
+ex1517                  S&P 500
+ex1518                  Effectiveness of Measles Vaccine
+ex1519                  El Nino and the Southern Oscillation
+ex1605                  Nature-Nurture
+ex1611                  Religious Competition
+ex1612                  Wastewater
+ex1613                  Flea Beetle Distinction
+ex1614                  Pschoimmunology
+ex1615                  Trends in SAT Scores
+ex1620                  Differential Gene Expression with RNA
+                        Sequencing
+ex1708                  Pig Fat
+ex1715                  Church Distinctiveness
+ex1716                  Insurance
+ex1914                  Mantel-Haenszel Test for Censored survival
+                        Times: Lymphoma and Radiation Data
+ex1916                  Vitamin C and Colds
+ex1917                  Alcohol Consumption and Breast Cancer-A
+                        Retrospective Study
+ex1918                  The Donner Party
+ex1919                  Tire-Related Fatal Accidents and Ford Sports
+                        Utility Vehicles
+ex1921                  Diet Wars II
+ex1922                  Diet Wars III
+ex1923                  Who Looks After the Kids?
+ex2011                  Space Shuttle
+ex2012                  Muscular Dystrophy
+ex2015                  Spotted Owl Habitat
+ex2016                  Bumpus Natural Selection Data
+ex2017                  Catholic stance
+ex2018                  Fatal Car Accidents Involving Tire Failures on
+                        Ford Explorers
+ex2019                  Missile Defenses
+ex2113                  Vitamin C and Colds
+ex2115                  Belief Accessibility
+ex2116                  Aflatoxicol and Liver Tumors in Trout
+ex2117                  Effect of Stress During Conception on Odds of a
+                        Male Birth
+ex2118                  HIV and Circumcision
+ex2119                  Meta-Analysis of Breast Cancer and Lactation
+                        Studies
+ex2120                  Clever Hans Effect
+ex2216                  Murder-Suicides by Deliberate Plane Crash
+ex2220                  Cancer Deaths of Atomic Bomb Survivors
+ex2222                  Emulating Jane Austen's Writing Style
+ex2223                  Space Shuttle O-Ring Failures
+ex2224                  Valve Failure in Nuclear Reactors
+ex2225                  Body Size and Reproductive Success in a
+                        Population of Male Bullfrogs
+ex2226                  Number of Moons
+ex2414                  Amphibian Crisis and UV-B
